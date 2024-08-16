@@ -17,8 +17,8 @@ const menus = () => {
       url: "/",
     },
     {
-      name: "Posts",
-      url: "/posts",
+      name: "Articles",
+      url: "/articles",
     },
     {
       name: "Profile",
