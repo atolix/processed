@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import { formattedPublishedAt } from "@/lib/utils";
 
 export const metadata = {
   title: "Articles",
@@ -23,10 +24,16 @@ export default async function Articles() {
           <Link key={article.id} href={`/articles/${article.id}`}>
             <Card key={article.id}>
               <CardHeader>
-                <img src={article.eyecatch.url} alt={article.title} className="w-full h-auto max-h-[200px] object-cover"/>
+                <img
+                  src={article.eyecatch.url}
+                  alt={article.title}
+                  className="w-full h-auto max-h-[200px] object-cover"
+                />
               </CardHeader>
               <CardContent>
-                {formattedPublishedAt(article.publishedAt)}
+                <p className="text-sm text-muted-foreground">
+                  {formattedPublishedAt(article.publishedAt)}
+                </p>
                 <CardTitle className="text-md mt-2">{article.title}</CardTitle>
               </CardContent>
               <CardFooter>
@@ -41,20 +48,3 @@ export default async function Articles() {
     </div>
   );
 }
-
-const formattedPublishedAt = (date: string) => {
-  const formattedDate = new Date(date).toLocaleDateString("ja-JP", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-
-  const formattedTime = new Date(date).toLocaleTimeString("ja-JP", {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-
-  return (
-    <p className="text-sm text-muted-foreground">{`${formattedDate} ${formattedTime}`}</p>
-  );
-};
