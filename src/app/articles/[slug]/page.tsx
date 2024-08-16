@@ -1,5 +1,6 @@
 import { client } from "@/lib/client";
 import { formattedPublishedAt } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 export default async function Post({ params }): { params: { slug: string } } {
   const data = await client.get({
@@ -14,10 +15,16 @@ export default async function Post({ params }): { params: { slug: string } } {
           <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
             {data.title}
           </h1>
-          <p className="text-sm text-muted-foreground mt-2">
-            {formattedPublishedAt(data.publishedAt)}
-          </p>
+          <div className="flex items-center space-x-4 mt-2">
+            <p className="text-sm text-muted-foreground">
+              {formattedPublishedAt(data.publishedAt)}
+            </p>
+            <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+              {data.category && data.category.name}
+            </div>
+          </div>
         </div>
+        <Separator />
         <div
           dangerouslySetInnerHTML={{
             __html: `${data.content}`,
