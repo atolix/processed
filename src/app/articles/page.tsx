@@ -31,9 +31,14 @@ export default async function Articles() {
                 />
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  {formattedPublishedAt(article.publishedAt)}
-                </p>
+                <div className="flex items-center space-x-4">
+                  <p className="text-sm text-muted-foreground">
+                    {formattedPublishedAt(article.publishedAt)}
+                  </p>
+                  <div className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground">
+                    {article.category && article.category.name}
+                  </div>
+                </div>
                 <CardTitle className="text-md mt-2">{article.title}</CardTitle>
               </CardContent>
               <CardFooter>
