@@ -3,17 +3,40 @@ export const Header = () => {
     <div className="sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-center">
         <nav className="flex justify-center items-center gap-4 text-sm lg:gap-6">
-          <a href="/" className="transition-colors hover:text-foreground/80 text-foreground/60">
-            Home
-          </a>
-          <a href="/posts" className="transition-colors hover:text-foreground/80 text-foreground/60">
-            Posts
-          </a>
-          <a href="/profile" className="transition-colors hover:text-foreground/80 text-foreground/60">
-            Profile
-          </a>
+          {menus()}
         </nav>
       </div>
     </div>
+  );
+};
+
+const menus = () => {
+  const menu = [
+    {
+      name: "Home",
+      url: "/",
+    },
+    {
+      name: "Posts",
+      url: "/posts",
+    },
+    {
+      name: "Profile",
+      url: "/profile",
+    },
+  ];
+
+  return (
+    <nav className="flex justify-center items-center gap-4 text-sm lg:gap-6">
+      {menu.map((item) => (
+        <a
+          href={item.url}
+          key={item.name}
+          className="transition-colors hover:text-foreground/80 text-foreground/60"
+        >
+          {item.name}
+        </a>
+      ))}
+    </nav>
   );
 };
