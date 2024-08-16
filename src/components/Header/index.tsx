@@ -1,6 +1,6 @@
 export const Header = () => {
   return (
-    <div className="sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="sticky top-0 z-50 w-full border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/20">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-center">
         <nav className="flex justify-center items-center gap-4 text-sm lg:gap-6">
           {menus()}
