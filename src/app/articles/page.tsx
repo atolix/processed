@@ -24,11 +24,11 @@ export default async function Articles() {
               <img src={article.eyecatch.url} alt={article.title} />
             </CardHeader>
             <CardContent>
-              <CardTitle>{article.title}</CardTitle>
-              <CardDescription>description</CardDescription>
+              {formattedPublishedAt(article.publishedAt)}
+              <CardTitle className="text-lg mt-2">{article.title}</CardTitle>
             </CardContent>
             <CardFooter>
-              <p>{article.publishedAt}</p>
+              <CardDescription className="truncate text-xs">{article.content}</CardDescription>
             </CardFooter>
           </Card>
         ))}
@@ -36,3 +36,20 @@ export default async function Articles() {
     </div>
   );
 }
+
+const formattedPublishedAt = (date: string) => {
+  const formattedDate = new Date(date).toLocaleDateString("ja-JP", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  const formattedTime = new Date(date).toLocaleTimeString("ja-JP", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  return (
+    <p className="text-sm text-muted-foreground">{`${formattedDate} ${formattedTime}`}</p>
+  );
+};
