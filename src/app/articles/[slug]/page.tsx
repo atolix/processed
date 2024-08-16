@@ -1,6 +1,7 @@
 import { client } from "@/lib/client";
 import { formattedPublishedAt } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
+import { TableOfContents } from "@/components/ui/table-of-contents";
 
 export default async function Post({ params }): { params: { slug: string } } {
   const data = await client.get({
@@ -29,9 +30,12 @@ export default async function Post({ params }): { params: { slug: string } } {
           dangerouslySetInnerHTML={{
             __html: `${data.content}`,
           }}
+          id="markdown-content"
         ></div>
       </div>
-      <div className="flex flex-col space-y-1.5 p-3">aaaaaa</div>
+      <div className="flex flex-col space-y-1.5 p-3">
+        <TableOfContents />
+      </div>
     </div>
   );
 }
