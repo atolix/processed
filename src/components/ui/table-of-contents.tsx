@@ -18,7 +18,7 @@ export const TableOfContents = () => {
 
   return (
     <nav>
-      <h2 className="font-semibold pb-3">index</h2>
+      <h2 className="font-semibold pb-3">Contents</h2>
       <div className="toc text-sm"></div>
     </nav>
   )
