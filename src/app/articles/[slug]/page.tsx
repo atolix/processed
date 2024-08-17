@@ -34,7 +34,7 @@ export default async function Post({ params }): { params: { slug: string } } {
           }}
         />
       </div>
-      <div className="flex flex-col space-y-1.5 p-3">
+      <div className="sticky top-20 flex flex-col space-y-1.5 p-3">
         <TableOfContents />
       </div>
     </div>
