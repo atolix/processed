@@ -13,12 +13,8 @@ export const Header = () => {
 const menus = () => {
   const menu = [
     {
-      name: "Home",
-      url: "/",
-    },
-    {
       name: "Articles",
-      url: "/articles",
+      url: "/",
     },
     {
       name: "Profile",
