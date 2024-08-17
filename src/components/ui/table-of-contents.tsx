@@ -8,7 +8,7 @@ export const TableOfContents = () => {
     tocbot.init({
       tocSelector: ".toc",
       contentSelector: "#markdown-content",
-      headingSelector: "h1, h2, h3, h4",
+      headingSelector: "h2, h3, h4",
       headingsOffset: 50,
       scrollSmoothOffset: -80,
     });
@@ -16,5 +16,10 @@ export const TableOfContents = () => {
     return () => tocbot.destroy();
   }, []);
 
-  return <nav className="toc">Table of Contents</nav>;
+  return (
+    <nav>
+      <h2 className="font-semibold pb-3">index</h2>
+      <div className="toc text-sm"></div>
+    </nav>
+  )
 };

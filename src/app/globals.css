@@ -106,3 +106,34 @@ body {
   list-style-type: decimal;
   list-style-position: inside;
 }
+
+.toc {
+  .toc-list {
+    padding: 10px;
+
+    .toc-list-item {
+      position: "relative";
+      padding: 5px;
+      color: #aaa;
+
+      &.is-active-li {
+        color: var(--primary-foreground);
+      }
+
+      .toc-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+
+        &:hover {
+          background-color: #f5f5f5;
+        }
+
+        &.is-active {
+          background-color: var(--primary);
+          color: var(--primary-foreground);
+        }
+      }
+    }
+  }
+}
