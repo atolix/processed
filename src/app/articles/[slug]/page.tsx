@@ -36,7 +36,7 @@ export default async function Article({ params }: Readonly<{ params: { slug: str
           }}
         />
       </div>
-      <div className="sticky top-20 flex flex-col space-y-1.5 p-3">
+      <div className="sticky top-20 flex flex-col space-y-1.5 p-3" id="contents-index">
         <TableOfContents />
       </div>
     </div>

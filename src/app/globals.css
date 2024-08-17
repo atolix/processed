@@ -75,6 +75,17 @@ body {
   width: 80%;
 }
 
+/* スマホ画面用のメディアクエリ */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+  }
+  #contents-index {
+    display: none;
+  }
+}
+
 #markdown-content h1 {
   font-size: 30px;
   font-weight: bold;
