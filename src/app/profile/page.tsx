@@ -9,7 +9,7 @@ export default function Profile() {
       <h3 className="text-sm p-1">location: Tokyo</h3>
       <h3 className="text-sm p-1">job: Web Backend Developer(for 2 years)</h3>
       <h3 className="text-sm p-1">tech stack: Ruby, Typescript, AWS</h3>
-      <h3 className="text-sm p-1">interest: Synthesizer, Electric bass, Fashion</h3>
+      <h3 className="text-sm p-1">interest: Synthesizer, Electric bass</h3>
     </div>
   );
 }
