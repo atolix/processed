@@ -9,8 +9,8 @@ export const TableOfContents = () => {
       tocSelector: ".toc",
       contentSelector: "#markdown-content",
       headingSelector: "h1, h2, h3, h4",
-      headingsOffset: 100,
-      scrollSmoothOffset: -40,
+      headingsOffset: 50,
+      scrollSmoothOffset: -80,
     });
 
     return () => tocbot.destroy();
