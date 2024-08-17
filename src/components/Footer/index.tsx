@@ -18,7 +18,7 @@ export const Footer = () => {
           Github
         </a>
         <a
-          href="/https://open.spotify.com/user/j99idhbgg0ogba7hgqri5ntsg"
+          href="https://open.spotify.com/user/j99idhbgg0ogba7hgqri5ntsg"
           className="transition-colors hover:text-foreground/80 text-foreground/60"
         >
           Spotify
