@@ -4,8 +4,8 @@ import { Separator } from "@/components/ui/separator";
 import { TableOfContents } from "@/components/ui/table-of-contents";
 import ReactMarkdown from "react-markdown";
 
-export default async function Post({ params }): { params: { slug: string } } {
-  const data = await client.get({
+export default async function Article({ params }: Readonly<{ params: { slug: string } }>) {
+  const data: Article = await client.get({
     endpoint: "articles",
     contentId: params.slug,
   });

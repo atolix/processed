@@ -15,12 +15,12 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const data = await client.get({ endpoint: "articles" });
+  const data: Article[] = await client.get({ endpoint: "articles" }).then((res) => res.contents);
 
   return (
     <div className="mx-auto grid w-full max-w-6xl items-start gap-12">
       <div className="grid w-full flex-1 gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {data.contents.map((article) => (
+        {data.map((article) => (
           <Link key={article.id} href={`/articles/${article.id}`}>
             <Card key={article.id}>
               <CardHeader>
