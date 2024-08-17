@@ -76,31 +76,33 @@ body {
 }
 
 #markdown-content h1 {
-  font-size: 2em;
+  font-size: 30px;
   font-weight: bold;
+  margin: 40px 0 20px;
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 #markdown-content h2 {
-  font-size: 1.5em;
+  font-size: 24px;
   font-weight: bold;
+  margin: 40px 0 16px;
+  border-bottom: 1px solid #ddd;
 }
 
 #markdown-content h3 {
   font-size: 1.17em;
   font-weight: bold;
+  padding: 3px;
 }
 
-#markdown-content h4 {
-  font-size: 1em;
-  font-weight: bold;
+#markdown-content p {
+  line-height: 1.8;
+    letter-spacing: 0.2px;
 }
 
-#markdown-content h5 {
-  font-size: 0.83em;
-  font-weight: bold;
-}
-
-#markdown-content h6 {
-  font-size: 0.67em;
-  font-weight: bold;
+#markdown-content ol {
+  list-style-type: decimal;
+  list-style-position: inside;
 }
