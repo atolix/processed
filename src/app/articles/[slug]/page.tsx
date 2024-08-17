@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { client } from "@/lib/client";
 import { formattedPublishedAt } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
