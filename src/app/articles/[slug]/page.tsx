@@ -6,6 +6,10 @@ import { Separator } from "@/components/ui/separator";
 import { TableOfContents } from "@/components/ui/table-of-contents";
 import ReactMarkdown from "react-markdown";
 
+export const metadata = {
+  title: "Article",
+};
+
 export default async function Article({ params }: Readonly<{ params: { slug: string } }>) {
   const data: Article = await client.get({
     endpoint: "articles",
