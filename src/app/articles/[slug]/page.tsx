@@ -22,7 +22,7 @@ export default async function Article({
     <div className="mx-auto grid w-full max-w-6xl items-start gap-12 md:grid-cols-[1fr_180px] lg:grid-cols-[1fr_250px] mb-30">
       <div className="grid w-full flex-1 gap-6 p-3">
         <div className="flex flex-col space-y-1.5">
-          <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
+          <h1 className="flex-1 shrink-0 whitespace-nowrap text-2xl font-semibold tracking-tight sm:grow-0">
             {data.title}
           </h1>
           <div className="flex items-center space-x-4 mt-2">

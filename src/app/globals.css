@@ -97,19 +97,19 @@ body {
 
 #markdown-content h2 {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: semibold;
   margin: 40px 0 16px;
   border-bottom: 1px solid #ddd;
 }
 
 #markdown-content h3 {
   font-size: 1.17em;
-  font-weight: bold;
+  font-weight: semibold;
   padding: 3px;
 }
 
 #markdown-content h4 {
-  font-weight: bold;
+  font-weight: semibold;
   padding: 3px;
 }
 
