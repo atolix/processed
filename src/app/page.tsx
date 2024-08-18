@@ -31,7 +31,7 @@ export default async function Home() {
                   <img
                     src={article.eyecatch.url}
                     alt={article.title}
-                    className="w-full h-auto max-h-[200px] object-cover"
+                    className="w-full h-auto max-h-[180px] object-cover"
                   />
                 </AspectRatio>
               </CardHeader>
