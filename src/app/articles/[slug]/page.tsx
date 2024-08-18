@@ -10,7 +10,9 @@ export const metadata = {
   title: "Article",
 };
 
-export default async function Article({ params }: Readonly<{ params: { slug: string } }>) {
+export default async function Article({
+  params,
+}: Readonly<{ params: { slug: string } }>) {
   const data: Article = await client.get({
     endpoint: "articles",
     contentId: params.slug,
@@ -40,7 +42,10 @@ export default async function Article({ params }: Readonly<{ params: { slug: str
           }}
         />
       </div>
-      <div className="sticky top-20 flex flex-col space-y-1.5 p-3" id="contents-index">
+      <div
+        className="sticky top-20 flex flex-col space-y-1.5 p-3"
+        id="contents-index"
+      >
         <TableOfContents />
       </div>
     </div>

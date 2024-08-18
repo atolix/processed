@@ -118,6 +118,46 @@ body {
   list-style-position: inside;
 }
 
+#markdown-content figure {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#markdown-content div[data-filename] {
+  position: relative;
+  margin-bottom: 1.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 1.5em;
+  background-color: #2d2d2d;
+}
+
+#markdown-content div[data-filename]::before {
+  content: attr(data-filename);
+  position: absolute;
+  top: -1.25em;
+  left: 0;
+  background-color: #f5f5f5;
+  padding: 0.25em 0.5em;
+  font-size: 0.85em;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px 4px 0 0;
+}
+
+#markdown-content div[data-filename] pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+  font-size: 0.875em;
+  padding: 1em;
+  background-color: #f9f9f9;
+  border-radius: 0 0 4px 4px;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  overflow: auto;
+}
+
 .toc {
   .toc-list {
     padding: 10px;
