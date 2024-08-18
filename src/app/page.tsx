@@ -9,13 +9,16 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { formattedPublishedAt } from "@/lib/utils";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const metadata = {
   title: "Articles",
 };
 
 export default async function Home() {
-  const data: Article[] = await client.get({ endpoint: "articles" }).then((res) => res.contents);
+  const data: Article[] = await client
+    .get({ endpoint: "articles" })
+    .then((res) => res.contents);
 
   return (
     <div className="mx-auto grid w-full max-w-6xl items-start gap-12">
@@ -24,11 +27,13 @@ export default async function Home() {
           <Link key={article.id} href={`/articles/${article.id}`}>
             <Card key={article.id}>
               <CardHeader>
-                <img
-                  src={article.eyecatch.url}
-                  alt={article.title}
-                  className="w-full h-auto max-h-[200px] object-cover"
-                />
+                <AspectRatio ratio={16 / 9}>
+                  <img
+                    src={article.eyecatch.url}
+                    alt={article.title}
+                    className="w-full h-auto max-h-[200px] object-cover"
+                  />
+                </AspectRatio>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center space-x-4">
