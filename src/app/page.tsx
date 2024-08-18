@@ -46,11 +46,6 @@ export default async function Home() {
                 </div>
                 <CardTitle className="text-md mt-2">{article.title}</CardTitle>
               </CardContent>
-              <CardFooter>
-                <CardDescription className="truncate text-xs">
-                  {article.content}
-                </CardDescription>
-              </CardFooter>
             </Card>
           </Link>
         ))}
