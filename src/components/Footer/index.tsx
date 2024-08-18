@@ -25,7 +25,7 @@ export const Footer = () => {
         </a>
       </nav>
       <p className="text-sm text-muted-foreground pt-3">This site uses Google Analytics.</p>
-      <p className="text-sm text-muted-foreground p-3">© 2024 *processed_ by atolix</p>
+      <p className="text-sm text-muted-foreground p-3">© 2024 atolix</p>
     </footer>
   );
 }
