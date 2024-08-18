@@ -36,7 +36,7 @@ export default async function Home() {
                 </AspectRatio>
               </CardHeader>
               <CardContent>
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-4 mt-2">
                   <p className="text-sm text-muted-foreground">
                     {formattedPublishedAt(article.publishedAt)}
                   </p>
