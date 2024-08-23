@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,13 +25,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
-        <Header />
-        <div className="flex flex-col min-h-screen container mt-6">
-          {children}
-        </div>
-        <Footer />
-      </body>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <body className={inter.className}>
+          <Header />
+          <div className="flex flex-col min-h-screen container mt-6">
+            {children}
+          </div>
+          <Footer />
+        </body>
+      </ThemeProvider>
       <GoogleAnalytics gaId={process.env.GA_ID ?? ""} />
     </html>
   );
