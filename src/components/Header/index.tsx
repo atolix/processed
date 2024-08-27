@@ -21,7 +21,6 @@ const menus = () => {
       url: "/profile",
     },
   ];
-
   return (
     <nav className="flex justify-center items-center gap-4 text-sm lg:gap-6">
       {menu.map((item) => (
