@@ -41,6 +41,14 @@ export default async function Article({
             __html: `${data.content}`,
           }}
         />
+        <div>
+          <a
+            href="/"
+            className="transition-colors hover:text-foreground/80 text-foreground/60"
+          >
+            ← Back to Articles
+          </a>
+        </div>
       </div>
       <div
         className="sticky top-20 flex flex-col space-y-1.5 p-3"
